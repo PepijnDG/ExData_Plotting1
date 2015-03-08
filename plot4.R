@@ -27,13 +27,13 @@ par(mfrow=c(2,2))
 
 plot(test$datetime, as.numeric(test$Global_active_power), type="l", ylab = "Global Active Power (kilowats)", xlab = "")
 
-plot(test$datetime, as.numeric(test$Voltage), type="l", xlab = "datatime", ylab = "Voltage")
+plot(test$datetime, as.numeric(test$Voltage), type="l", xlab = "datetime", ylab = "Voltage")
 
 plot(test$datetime, as.numeric(test$Sub_metering_1), type="l", ylab = "Energy sub metering", xlab = "", col="black")
 lines(test$datetime, as.numeric(test$Sub_metering_2), col="red")
 lines(test$datetime, as.numeric(test$Sub_metering_3), col="blue")
 legend("topright", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), bty="n", lty=1, col = c("black", "red", "blue"))
 
-plot(test$datetime, as.numeric(test$Global_reactive_power), type="l", xlab = "datatime", ylab = "Global_reactive_power")
+plot(test$datetime, as.numeric(test$Global_reactive_power), type="l", xlab = "datetime", ylab = "Global_reactive_power")
 
 dev.off()
